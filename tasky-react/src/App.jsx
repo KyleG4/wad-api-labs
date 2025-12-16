@@ -1,3 +1,4 @@
+import Header from "./components/SiteHeader";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router";
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
@@ -26,7 +27,7 @@ const App = () => {
       <BrowserRouter>
         <AuthContextProvider>
           <div className="container">
-            <h1>Tasky</h1>
+            <Header />
             <Routes>
               <Route path="/" element={< StartPage />} />
               <Route path="/login" element={< LoginPage />} />
